@@ -3,16 +3,21 @@ import styles from "./Login.module.css";
 import { useState } from "react";
 import { LoginUser } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import {ToastContainer, toast} from "react-toastify";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const notify = () => toast("Неверный логин или пароль!")
 
   const handleSubmit = async () => {
     console.log("email, password: ", email, password);
     const data = await LoginUser({ email, password });
     console.log("DATA = ", data);
+    if(!data){
+      notify()
+    }
     if (data.user.id == "admin") {
       navigate("/admin");
     }else {
@@ -57,6 +62,9 @@ export default function Login() {
           Нет аккаунта? Зарегистрироваться
         </Typography>
       </Box>
+      <ToastContainer
+          position="top-center"
+      />
     </Box>
   );
 }
