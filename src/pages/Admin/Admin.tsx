@@ -97,7 +97,7 @@ export default function Admin() {
                                         <br />
                                         <a
                                             target={"_blank"}
-                                            href={appointment.telegram_nick}
+                                            href={`https://t.me/${appointment.telegram_nick.replace('@', '')}`}
                                             className={styles.telegram}>{appointment.telegram_nick}</a>
                                     </>
                                 }
