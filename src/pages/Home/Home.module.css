@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.appointmentButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.formSection {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
