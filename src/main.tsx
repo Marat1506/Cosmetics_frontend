@@ -30,7 +30,8 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <Admin />
   }
-]);
+],
+    {basename: "/"});
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
