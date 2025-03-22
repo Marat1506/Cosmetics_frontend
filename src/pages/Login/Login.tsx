@@ -33,6 +33,7 @@ export default function Login() {
       <Box width="100%" maxWidth="400px">
         <form className={styles.content}>
           <TextField
+              itemID={`${Math.random()}`}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             fullWidth
@@ -41,6 +42,7 @@ export default function Login() {
             variant="outlined"
           />
           <TextField
+              itemID={`${Math.random()}`}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             fullWidth

@@ -3,7 +3,7 @@ import {CreateOrderType, LoginType, SignupType} from "./types";
 
 export async function LoginUser(params: LoginType) {
     try {
-        const response = await fetch("https://cosmetics-backend-3.onrender.com/login", {
+        const response = await fetch("https://cosmetics-backend-3.onrender.com/api/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ export async function LoginUser(params: LoginType) {
 
 export async function SignupUser(params: SignupType) {
     try {
-        const response = await fetch("https://cosmetics-backend-3.onrender.com/createuser", {
+        const response = await fetch("https://cosmetics-backend-3.onrender.com/api/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export async function SignupUser(params: SignupType) {
 
 export async function CreateOrder(params: CreateOrderType) {
     try {
-        const response = await fetch("https://cosmetics-backend-3.onrender.com/createOrder", {
+        const response = await fetch("https://cosmetics-backend-3.onrender.com/api/createOrder", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ export async function CreateOrder(params: CreateOrderType) {
 
 export async function GetOrders(){
     try {
-        const response = await fetch("https://cosmetics-backend-3.onrender.com/getOrders", {
+        const response = await fetch("https://cosmetics-backend-3.onrender.com/api/getOrders", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ export async function GetOrders(){
 
 export async function ChangeOrder(id: string){
     try {
-        const response = await fetch("https://cosmetics-backend-3.onrender.com/changeOrder", {
+        const response = await fetch("http://localhost:8080/api/changeOrder", {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export async function ChangeOrder(id: string){
 
 export async function DeleteOrder(id: string){
     try {
-        const response = await fetch("https://cosmetics-backend-3.onrender.com/deleteOrder", {
+        const response = await fetch("http://localhost:8080/api/deleteOrder", {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
