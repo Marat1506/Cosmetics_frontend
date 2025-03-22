@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
+import { RouterProvider, Navigate, createHashRouter} from 'react-router-dom'
 import './index.css'
 import Login from './pages/Login/Login.tsx'
 import Home from './pages/Home/Home.tsx'
@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import store from './store/store.ts'
 import Admin from "./pages/Admin/Admin.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Navigate to="/signup" replace /> // Перенаправление на /signup
